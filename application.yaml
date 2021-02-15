@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: guides
+          predicates:
+            - Path=/guides
+            - After=2020-09-02T00:00:00.000-00:00[America/Denver]
+          uri: https://spring.io
